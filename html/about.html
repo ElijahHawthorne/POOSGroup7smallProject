@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/code.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+</head>
+<body>
+    <div class="wrapper">
+        <!--Sidebar-->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-address-book"></i> Contacts</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> About Us</a></li>
+		<!--  <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li> -->
+		 <li><a href="javascript:doLogout(); "><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li>
+         <li><span id = "userName"></span></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <!-- Main Content -->
+            <div class="about-container">
+              <h1>About Us</h1>
+        
+              <!-- Team Section -->
+              <div class="section">
+                <div class="row">
+                  <div class="col-md-6 team-member">
+                    <img
+                      src="../images/testim.JPG"
+                      alt="Joseph"
+                      id="modalBtn1"
+                    />
+                    <h4>Joseph</h4>
+                    <p>University of Central Florida</p>
+                  </div>
+                  <div class="col-md-6 team-member">
+                    <img
+                      src="../images/testim.JPG"
+                      alt="Eduardo Salcedo Fuentes"
+                      id="modalBtn2"
+                    />
+                    <h4>Eduardo Salcedo Fuentes</h4>
+                    <p>University of Central Florida</p>
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <div class="col-md-6 team-member">
+                    <img
+                      src="../images/testim.JPG"
+                      alt="Nathan"
+                      id="modalBtn3"
+                    />
+                    <h4>Nathan</h4>
+                    <p>UCF</p>
+                  </div>
+                  <div class="col-md-6 team-member">
+                    <img
+                      src="../images/testim.JPG"
+                      alt="James"
+                      id="modalBtn4"
+                    />
+                    <h4>James</h4>
+                    <p>University of Central Florida</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 team-member">
+                    <img
+                      src="../images/testim.JPG"
+                      alt="elijah"
+                      id="modalBtn5"
+                    />
+                    <h4>elijah</h4>
+                    <p>UCF</p>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        
+            <!-- Modals -->
+            <!-- Modal for Josehp -->
+            <div id="myModal1" class="modal">
+              <div class="modal-content">
+                <span class="close" id="close1">&times;</span>
+                <h2>Joseph</h2>
+                <p>
+                  Email: <a href="mailto:james@ucf.edu">james@ucf.edu</a>
+                </p>
+                <p>Age: 21</p>
+                <p>Major: BSc in CS</p>
+                <p>University of Central Florida</p>
+              </div>
+            </div>
+        
+            <!-- Modal for Eduardo Salcedo Fuentes -->
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <span class="close" id="close2">&times;</span>
+                <h2>Eduardo Salcedo Fuentes</h2>
+                <p>
+                  Email: <a href="mailto:james@ucf.edu">james@ucf.edu</a>
+                </p>
+                <p>Age: 22</p>
+                <p>Major: BSc in CS</p>
+                <p>University of Central Florida</p>
+              </div>
+            </div>
+        
+            <!-- Modal for Nathan -->
+            <div id="myModal3" class="modal">
+              <div class="modal-content">
+                <span class="close" id="close3">&times;</span>
+                <h2>Nathan</h2>
+                <p>
+                  Email: <a href="mailto:james@ucf.edu">james@ucf.edu</a>
+                </p>
+                <p>Age: 26</p>
+                <p>Major: BSc in CS</p>
+                <p>University of Central Florida</p>
+              </div>
+            </div>
+        
+            <div id="myModal4" class="modal">
+              <div class="modal-content">
+                <span class="close" id="close4">&times;</span>
+                <h2>James</h2>
+                <p>
+                  Email: <a href="mailto:james@ucf.edu">james@ucf.edu</a>
+                </p>
+                <p>Age: 21</p>
+                <p>Major: BSc in CS</p>
+                <p>University of Central Florida</p>
+              </div>
+            </div>
+        <!-- Modal for Josehp -->
+        <div id="myModal5" class="modal">
+          <div class="modal-content">
+            <span class="close" id="close5">&times;</span>
+            <h2>elijah</h2>
+            <p>
+              Email: <a href="mailto:elijah@ucf.edu">eliahj@ucf.edu</a>
+            </p>
+            <p>Age: 21</p>
+            <p>Major: BSc in CS</p>
+            <p>University of Central Florida</p>
+          </div>
+        </div>
+        
+            <script>
+              // Modal handling script
+              const modal1 = document.getElementById("myModal1");
+              const btn1 = document.getElementById("modalBtn1");
+              const close1 = document.getElementById("close1");
+        
+              const modal2 = document.getElementById("myModal2");
+              const btn2 = document.getElementById("modalBtn2");
+              const close2 = document.getElementById("close2");
+        
+              const modal3 = document.getElementById("myModal3");
+              const btn3 = document.getElementById("modalBtn3");
+              const close3 = document.getElementById("close3");
+        
+              const modal4 = document.getElementById("myModal4");
+              const btn4 = document.getElementById("modalBtn4");
+              const close4 = document.getElementById("close4");
+
+              const modal5 = document.getElementById("myModal5");
+              const btn5 = document.getElementById("modalBtn5");
+              const close5 = document.getElementById("close5");
+        
+              // Open modal functions
+              btn1.onclick = () => {
+                modal1.classList.add("show");
+              };
+              btn2.onclick = () => {
+                modal2.classList.add("show");
+              };
+              btn3.onclick = () => {
+                modal3.classList.add("show");
+              };
+              btn4.onclick = () => {
+                modal4.classList.add("show");
+              };
+              btn5.onclick = () => {
+                modal5.classList.add("show");
+              };
+        
+              // Close modal functions
+              close1.onclick = () => {
+                modal1.classList.remove("show");
+              };
+              close2.onclick = () => {
+                modal2.classList.remove("show");
+              };
+              close3.onclick = () => {
+                modal3.classList.remove("show");
+              };
+              close4.onclick = () => {
+                modal4.classList.remove("show");
+              };
+              close5.onclick = () => {
+                modal5.classList.remove("show");
+              };
+        
+              // Close modal when clicking outside of the content
+              window.onclick = (event) => {
+                if (event.target === modal1) {
+                  modal1.classList.remove("show");
+                }
+                if (event.target === modal2) {
+                  modal2.classList.remove("show");
+                }
+                if (event.target === modal3) {
+                  modal3.classList.remove("show");
+                }
+                if (event.target === modal4) {
+                  modal4.classList.remove("show");
+                }
+                if (event.target === modal5) {
+                  modal5.classList.remove("show");
+                }
+              };
+            </script>
+          </div>
+    </div>
+
+    <footer>Background image created by Freepik &copy;</footer>
+</body>
+</html>

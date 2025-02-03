@@ -19,6 +19,9 @@
 		 <li><a href="javascript:doLogout(); "><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li>
          <li><span id = "userName"></span></li>
             </ul>
+        </ul>
+        
+        <span id = "loggedinAs"></span>    
         </div>
 
         <!--Main Content-->
@@ -30,6 +33,7 @@
                 <input type="text" id="searchText" placeholder="Search contacts..." title="Enter a contact to search" />
                 <button id="searchButton" onclick="loadContacts('search');"><i class="fa-solid fa-search"></i></button>
                 <span id = "contactSearchResult"></span>
+                
                 
             </div>
 
@@ -44,10 +48,19 @@
                 <button  type = "submit" id="addContactButton" onclick="addContact();">Add Contact</button>
             </form>
                 <span id="addContactResult"></span>
+
+                <input type="text" id="addfirstName" placeholder="First Name" required title="Enter a first name" />
+                <input type="text" id="addlastName" placeholder="Last Name" required title="Enter a last name" //>
+                <input type="email" id="addemail" placeholder="Email" required title="Enter an email" / />
+                <input type="tel" id="addphone" placeholder="Phone" required title="Enter a phone number" / /> <br>
+                <button  type = "submit" id="addContactButton" onclick="addContact();" style="align-self: center;">Add Contact</button>
+            </form> <br>
+                <span id="addContactResult" style="list-style: none"></span>
     
             </div>
 
             <!--Contacts Table-->
+        <div class="contacts-table-wrapper">
             <table class="contacts-table">
                 <thead>
                    
@@ -56,6 +69,9 @@
                         <th>Last Name</th>
                         <th><i class="fa-solid fa-envelope"></i> Email</th>
                         <th><i class="fa-solid fa-phone"></i> Phone</th>
+
+                        <th>Email</th>
+                        <th>Phone Number</th>
                         <th>Actions</th>
                     </tr>
                     
@@ -70,5 +86,27 @@
     </div>
     <footer>Background image created by Freepik &copy;</footer>
 </body>
+
+                    
+                </tbody>
+                
+            </table>
+            <span id = "contactSearchResult" style="margin-top: 70px;"></span>
+        </div>
+            
+        </div>
+    </div>
+
+    <div id="popupForm" class="popup-form">
+     <div id="popupContent" class = "popup-content">
+
+     </div>   
+    </div>
+
+
+
+</body>
+    <footer>Background image created by Freepik &copy;</footer>
+
 </html>
 

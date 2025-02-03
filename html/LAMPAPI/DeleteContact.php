@@ -1,8 +1,7 @@
 <?php
 	$inData = getRequestInfo();
 	
-	$firstName = $inData["FirstName"];
-	$lastName = $inData["LastName"];
+	$contactID = $inData["contactID"];
 	
 	
 
@@ -13,8 +12,8 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("DELETE FROM Contacts WHERE Firstname = ? AND LastName = ? ;");
-		$stmt->bind_param("ss", $firstName, $lastName);
+		$stmt = $conn->prepare("DELETE FROM Contacts WHERE ID = ?;");
+		$stmt->bind_param("s", $contactID);
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();

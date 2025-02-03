@@ -17,7 +17,8 @@
                 <li><a href="about.html"><i class="fa-solid fa-users"></i> About Us</a></li>
 		<!--  <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li> -->
 		 <li><a href="javascript:doLogout(); "><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li>
-         
+         <li><span id = "userName"></span></li>
+            </ul>
         </ul>
         
         <span id = "loggedinAs"></span>    
@@ -31,6 +32,7 @@
             <div class="search-container">
                 <input type="text" id="searchText" placeholder="Search contacts..." title="Enter a contact to search" />
                 <button id="searchButton" onclick="loadContacts('search');"><i class="fa-solid fa-search"></i></button>
+                <span id = "contactSearchResult"></span>
                 
                 
             </div>
@@ -39,6 +41,14 @@
             <div class="add-contact-container">
                 <h2>Add New Contact</h2>
             <form>
+                <input type="text" id="addfirstName" placeholder="First Name" required />
+                <input type="text" id="addlastName" placeholder="Last Name" required />
+                <input type="email" id="addemail" placeholder="Email" required />
+                <input type="tel" id="addphone" placeholder="Phone" required />
+                <button  type = "submit" id="addContactButton" onclick="addContact();">Add Contact</button>
+            </form>
+                <span id="addContactResult"></span>
+
                 <input type="text" id="addfirstName" placeholder="First Name" required title="Enter a first name" />
                 <input type="text" id="addlastName" placeholder="Last Name" required title="Enter a last name" //>
                 <input type="email" id="addemail" placeholder="Email" required title="Enter an email" / />
@@ -57,6 +67,9 @@
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th><i class="fa-solid fa-envelope"></i> Email</th>
+                        <th><i class="fa-solid fa-phone"></i> Phone</th>
+
                         <th>Email</th>
                         <th>Phone Number</th>
                         <th>Actions</th>
@@ -64,6 +77,16 @@
                     
                 </thead>
                 <tbody id="contactsTableBody">
+                    <!-- Dynamic content will be injected here -->
+                </tbody>
+               
+            </table>
+            
+        </div>
+    </div>
+    <footer>Background image created by Freepik &copy;</footer>
+</body>
+
                     
                 </tbody>
                 
